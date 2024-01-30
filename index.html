@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos.css">
+    <title>Página con Video de Fondo</title>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted id="video-background">
+            <source src="./Drift.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h1>¡Bienvenido al Mundo del Drift!</h1>
+            <p>Descubre la emoción de las curvas y la velocidad.</p>
+            <button id="toggle-sound" onclick="toggleSound()">Activar / Desactivar Sonido</button>
+        </div>
+    </div>
+
+    <script>
+        var video = document.getElementById("video-background");
+
+        function toggleSound() {
+            if (video.muted) {
+                video.muted = false;
+            } else {
+                video.muted = true;
+            }
+        }
+    </script>
+</body>
+</html>
+
